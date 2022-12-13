@@ -22,7 +22,8 @@ public class AuthController {
 	@RequestMapping("/signin/{email}/{password}")
 	public String Signin(@PathVariable String email,@PathVariable String password)
 	{
-		
+		// TODO send email and password in body not as path variables
+		// TODO use ResponseEntity
 		return service.Signin(email,password);
 		
 		

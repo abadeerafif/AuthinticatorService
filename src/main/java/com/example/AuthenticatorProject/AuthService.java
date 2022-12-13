@@ -19,7 +19,7 @@ public class AuthService {
 	public String Signin(String email,String password)
 	{
 		Optional<User> u= usersrepo.findById(email);
-		
+		// TODO check if u.isPresent()
 		String res=u.get().signin(password);
 		if(res=="null")
 		{
@@ -38,6 +38,7 @@ public class AuthService {
 	public String Signup(User user)
 	{
 		Optional<User> u= usersrepo.findById(user.getEmail());
+		// TODO check if u.isPresent()
 		if(u!=null)
 		{
 			return "0";
